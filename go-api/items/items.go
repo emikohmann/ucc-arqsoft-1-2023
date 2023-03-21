@@ -7,6 +7,7 @@ type Item struct {
 	HasTaxes    bool
 }
 
+// HOLAAAA
 // Constante exportada (empieza con mayúscula)
 const StoreName = "Tienda Oficial Adidas"
 
