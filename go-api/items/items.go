@@ -1,5 +1,7 @@
 package items
 
+import "fmt"
+
 type Item struct {
 	Title       string
 	Description string
@@ -20,4 +22,15 @@ func GetItem() *Item {
 		Price:       30000,
 		HasTaxes:    false,
 	}
+}
+
+// GetIt2em retorna un puntero a Item (*Item)
+func GetItems(num int) ([]*Item, error) {
+	var err error = nil
+	if num < 0 {
+		err = fmt.Errorf("no puede ingresar '%d' ya que es negativo", num)
+	}
+
+	myitems := []*Item{}
+	return myitems, err
 }
