@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"go-api/items"
+	"errors"
 )
 
 func main() {
@@ -23,4 +24,13 @@ func main() {
 	jsonString := string(bytes)
 
 	fmt.Println(jsonString)
+
+	err := errors.New("error generado intencionalmente")
+    if err != nil {
+        fmt.Println(err)
+    }
 }
+
+
+    
+
