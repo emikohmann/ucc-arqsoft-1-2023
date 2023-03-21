@@ -1,13 +1,24 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"go-api/items"
 )
 
 func main() {
 
+	notas, err, err1 := items.ErrorTesting(-1)
+	if err != nil{
+		fmt.Println(err)
+		return
+	}
+	if err1 != nil {
+		fmt.Println(err1)
+		return
+	}
+	println(notas)
+	
+	/*
 	fmt.Println("Hello, world")
 
 	// Puedo acceder a la constante StoreName de package items porque está exportada (empieza con mayúscula)
@@ -23,4 +34,5 @@ func main() {
 	jsonString := string(bytes)
 
 	fmt.Println(jsonString)
+	*/
 }

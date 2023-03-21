@@ -1,9 +1,11 @@
 package items
 
+import "fmt"
 type Item struct {
 	Title       string
 	Description string
 	Price       float64
+	Grade int
 	HasTaxes    bool
 }
 
@@ -21,4 +23,18 @@ func GetItem() *Item {
 		Price:       30000,
 		HasTaxes:    false,
 	}
+}
+
+func ErrorTesting(valor int) ([]*Item, error, error) {
+
+	var err error = nil
+	var err1 error = nil
+	if (valor <= 0){
+		err= fmt.Errorf("La nota %d es menor a 1", valor)
+	}
+	if (valor >10){
+		err1= fmt.Errorf("La nota %d es mayor que 10", valor)
+	}
+	notas := []*Item{}
+	return notas, err, err1
 }
