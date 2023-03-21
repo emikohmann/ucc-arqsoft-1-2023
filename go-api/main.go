@@ -24,5 +24,5 @@ func main() {
 
 	fmt.Println(jsonString)
 
-	//grupo-15 justo, david, augusto
+	//15
 }
