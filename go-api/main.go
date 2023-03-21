@@ -24,5 +24,22 @@ func main() {
 
 	fmt.Println(jsonString)
 	
+	// Se crea logica de error de división por cero
+	result, err := division(7, 1)
+	if err != nil {
+		fmt.Println("Error:", err.Error())
+		os.Exit(1)
+	} else {
+		fmt.Println("El resultado de la división es: ", result)
+	}
+	
 	//grupo13
+}
+
+// función división a prueba de error por división de cero
+func division(a, b int) (int, error) {
+	if b == 0 {
+		return -1, errors.New("No se puede dividir por cero")
+	}
+	return a / b, nil
 }
