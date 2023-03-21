@@ -1,5 +1,7 @@
 # Guia Práctica
 
+cambio de prueba
+
 ## Comandos de GO
 
 ### Corroborar la instalación y versión de GO
