@@ -6,6 +6,7 @@ import (
 	"go-api/items"
 )
 
+// Comentario grupo 10
 func main() {
 
 	fmt.Println("Hello, world")
