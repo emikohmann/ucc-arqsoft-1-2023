@@ -1,5 +1,7 @@
 package items
 
+import "errors"
+
 type Item struct {
 	Title       string
 	Description string
@@ -20,4 +22,15 @@ func GetItem() *Item {
 		Price:       30000,
 		HasTaxes:    false,
 	}
+}
+
+// function que se fija el precio de la orden de compra tira error si la cant <=0
+func Buy(price float64, item *Item) (float64, error) {
+	if price == 0 {
+		return -1, errors.New("no se pueden pedir 0 items")
+	}
+	if price < 0 {
+		return -1, errors.New("no se puede pedir items negativos")
+	}
+	return price * item.Price, nil
 }

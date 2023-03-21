@@ -24,5 +24,9 @@ func main() {
 
 	fmt.Println(jsonString)
 
- // grupo-15
+	//funcion para checkear precio de orden de compra devuelve error si la cant a comprar es 0 o negativa
+
+	fmt.Print(items.Buy(-4, item))
+
+	// grupo-15
 }
