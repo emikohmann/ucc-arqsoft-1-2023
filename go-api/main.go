@@ -28,10 +28,10 @@ func main() {
 	result, err := division(7, 1)
 	if err != nil {
 		fmt.Println("Error:", err.Error())
-		os.Exit(1)
-	} else {
-		fmt.Println("El resultado de la división es: ", result)
+		return
 	}
+	fmt.Println("El resultado de la división es: ", result)
+	
 	
 	//grupo13
 }
