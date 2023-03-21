@@ -3,6 +3,7 @@
 cambio de prueba
 
 ## Comandos de GO
+cambioo
 
 ### Corroborar la instalación y versión de GO
 
