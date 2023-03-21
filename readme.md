@@ -43,3 +43,55 @@ go mod tidy
 ```bash
 go fmt ./...
 ```
+
+## Comandos de GIT
+
+### Iniciar un nuevo repositorio
+
+> Crear una carpeta con el nombre del repositorio <br /> Pararse en la carpeta del repositorio
+
+```bash
+git init
+````
+
+### Clonar un repositorio
+
+> Pararse en la carpeta de proyectos
+
+```bash
+git clone https://github.com/{username}/{repo_name}.git
+```
+
+### Crear un nuevo branch
+
+```bash
+git checkout -b {branch_name}
+```
+
+### Configurar un remote
+
+> No es necesario si se clona el repositorio
+
+```bash
+git remote add {remote_name} https://github.com/{username}/{repo_name}
+```
+
+### Ver el listado de remotes
+
+```bash
+git remote -v
+```
+
+### Hacer un commit
+
+```bash
+git add .
+git commit -m "Commit message"
+git push origin {branch_name}
+```
+
+### Bajar los cambios del remote
+
+```bash
+git pull origin {branch_name}
+```
