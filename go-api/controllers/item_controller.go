@@ -18,6 +18,12 @@ func GetItem(ctx *gin.Context) {
 		return
 	}
 
-	item := services.GetItem(id)
+	item, err := services.GetItem(id)
+	if err != nil {
+		fmt.Println("Error getting item", err)
+		ctx.JSON(http.StatusInternalServerError, err)
+		return
+	}
+
 	ctx.JSON(http.StatusOK, item)
 }
