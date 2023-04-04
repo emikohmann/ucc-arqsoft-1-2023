@@ -38,7 +38,7 @@ func TestBuildItem(t *testing.T) {
 func TestGetItem(t *testing.T) {
 	//prepare
 	var id int64 = 1356058509
-
+	ItemClient = TestClient{}
 	//act
 	item, err := GetItem(id)
 	if err != nil {
