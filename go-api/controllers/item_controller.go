@@ -25,6 +25,7 @@ func GetItem(ctx *gin.Context) {
 	}
 
 	// Call the service with int ID
+	services.ItemClient = services.MlClient{}
 	item, err := services.GetItem(id)
 	if err != nil {
 		fmt.Println("Error getting item", err)
