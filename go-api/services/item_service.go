@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"encoding/json"
 )
-
+//
 // JSON - TO GO para transformar estructuras json en structuras .go
 
 type ItemMercadoLibre struct {
