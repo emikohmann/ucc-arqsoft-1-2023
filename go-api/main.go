@@ -1,19 +1,7 @@
 package main
 
-import (
-	"fmt"
-	"go-api/items"
-)
+import "go-api/app"
 
-func main() {
-	div, err := items.Division(8, 4)
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		fmt.Println("division: ", div)
-	}
-		
+func main(){
+	app.StartApp()
 }
-
-
-

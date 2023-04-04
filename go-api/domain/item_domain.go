@@ -1,0 +1,9 @@
+package domain
+//se define estructura, lo que es un item
+
+
+type Item struct{
+	ID int64 `json: "id"`
+	Name string `json: "name"`
+	Price float64 `json: "price"`
+}
