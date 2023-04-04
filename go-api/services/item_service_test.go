@@ -1,8 +1,9 @@
 package services
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 type TestClient struct{}
@@ -31,4 +32,13 @@ func TestBuildItem(t *testing.T) {
 	// if item.Name != itemML.Title {
 	// 	t.Error("item name doesn't match")
 	// }
+}
+
+func TestGetItem(t *testing.T) {
+	var id int64 = 10
+	ItemClient = TestClient{}
+	item, _ := GetItem(id)
+
+	assert.Equal(t, id, item.ID)
+
 }
