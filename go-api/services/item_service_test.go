@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+// para ejecutar los testing: go test ./... -v
 type TestClient struct{}
 
 func (testClient TestClient) GetItem(id int64) (ItemMercadoLibre, error) {
@@ -31,4 +32,17 @@ func TestBuildItem(t *testing.T) {
 	// if item.Name != itemML.Title {
 	// 	t.Error("item name doesn't match")
 	// }
+}
+
+func TestGetItem(t *testing.T) {
+	// prepare
+	ItemClient = TestClient{}
+
+	// act
+	item, err := GetItem(1)
+
+	// assert
+	assert.Nil(t, err)
+	assert.Equal(t, "Mocked item", item.Name)
+	assert.Equal(t, 50.00, item.Price)
 }
