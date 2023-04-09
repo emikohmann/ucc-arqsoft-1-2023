@@ -8,11 +8,12 @@ import (
 	"strconv"
 )
 
-const paramItemId = "itemID"
+const paramItemID = "itemID"
 
 func GetItem(ctx *gin.Context) {
 	// Get id param from URL as string
-	idString := ctx.Param(paramItemId)
+	idString := ctx.Param(paramItemID)
+
 	// Convert string ID to int ID
 	id, err := strconv.ParseInt(idString, 10, 64)
 	if err != nil {
@@ -21,12 +22,13 @@ func GetItem(ctx *gin.Context) {
 		return
 	}
 	//call the services with int ID
-	services.ItemClient = services.MLClient{}
+	services.ItemClient = services.MlClient{}
 	item, err := services.GetItem(id)
 	if err != nil {
 		fmt.Println("error getting items", err)
 		ctx.JSON(http.StatusInternalServerError, err) // Then we will create a custom error struct
 		return
 	}
+	//succesful case
 	ctx.JSON(http.StatusOK, item)
 }
