@@ -14,6 +14,7 @@ const (
 )
 
 func init() {
+	// Here we define that for the real application we will use HTTPClient as MLClient
 	services.MLClient = clients.HTTPClient{}
 }
 

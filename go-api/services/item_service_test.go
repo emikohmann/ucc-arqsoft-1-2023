@@ -7,6 +7,7 @@ import (
 )
 
 func init() {
+	// Here we define that for testing we will use MockClient as MLClient
 	MLClient = clients.MockClient{}
 }
 

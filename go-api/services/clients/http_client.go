@@ -8,6 +8,8 @@ import (
 	"net/http"
 )
 
+// HTTPClient is a particular implementation of MLClient (interface)
+// And it works calling the Mercado Libre API via HTTP
 type HTTPClient struct{}
 
 const (
