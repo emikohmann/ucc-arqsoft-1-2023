@@ -1,44 +1,38 @@
 package services
 
 import (
+	"go-api/services/clients"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
-type TestClient struct{}
-
-func (testClient TestClient) GetItem(id int64) (ItemMercadoLibre, error) {
-	return ItemMercadoLibre{
-		Title: "Mocked item",
-		Price: 50.00,
-	}, nil
+func init() {
+	// Here we define that for testing we will use MockClient as MLClient
+	MLClient = clients.MockClient{}
 }
 
 func TestBuildItem(t *testing.T) {
 	// prepare
-	itemML := ItemMercadoLibre{
+	var itemID int64 = 1
+	itemML := clients.MLItem{
 		Title: "Test item",
 		Price: 100.00,
 	}
 
 	// act
-	item := buildItem(1, itemML)
+	item := buildItem(itemID, itemML)
 
 	// assert
+	assert.Equal(t, itemID, item.ID)
 	assert.Equal(t, itemML.Title, item.Name)
+	assert.Equal(t, itemML.Price, item.Price)
 	assert.NotZero(t, item.Price)
-
-	// if item.Name != itemML.Title {
-	// 	t.Error("item name doesn't match")
-	// }
 }
 
 func TestGetItem(t *testing.T) {
-	var id int64 = 10
-	ItemClient = TestClient{}
-	item, _ := GetItem(id)
-
-	assert.Equal(t, id, item.ID)
-
+	item, err := GetItem(12345)
+	assert.Nil(t, err)
+	assert.Equal(t, "Mocked item title", item.Name)
+	assert.Equal(t, 50.00, item.Price)
 }

@@ -44,6 +44,14 @@ go mod tidy
 go fmt ./...
 ```
 
+### Correr todos los tests del proyecto
+
+> Pararse en la carpeta root del proyecto
+
+```bash
+go test ./... -v
+```
+
 ## Comandos de GIT
 
 ### Iniciar un nuevo repositorio

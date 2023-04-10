@@ -3,7 +3,6 @@ package app
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"go-api/controllers"
 )
 
 const (
@@ -13,13 +12,11 @@ const (
 func StartApp() {
 	router := gin.Default()
 
-	// Then we will move this to url_mapping in order to organize the code
-	router.GET("/items/:itemID", controllers.GetItem)
+	mapRoutes(router)
 
 	err := router.Run(port)
 	if err != nil {
-		// Then we will replace this error with a panic since it's a non-recoverable error
-		fmt.Println("Error running app", err)
+		panic(fmt.Errorf("error running app: %w", err))
 		return
 	}
 }
