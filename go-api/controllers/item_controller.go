@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go-api/services"
+	"go-api/services/clients"
 	"net/http"
 	"strconv"
 )
@@ -12,6 +13,10 @@ const (
 	paramItemID = "itemID"
 )
 
+func init() {
+	services.MLClient = clients.HTTPClient{}
+}
+
 func GetItem(ctx *gin.Context) {
 	// Get id param from URL as string
 	idString := ctx.Param(paramItemID)
@@ -19,17 +24,14 @@ func GetItem(ctx *gin.Context) {
 	// Convert string ID to int ID
 	id, err := strconv.ParseInt(idString, 10, 64)
 	if err != nil {
-		fmt.Println("Error parsing item ID", err)
-		ctx.JSON(http.StatusBadRequest, err) // Then we will create a custom error struct
+		ctx.JSON(http.StatusBadRequest, fmt.Errorf("error parsing item ID: %w", err))
 		return
 	}
 
 	// Call the service with int ID
-	services.ItemClient = services.MlClient{}
 	item, err := services.GetItem(id)
 	if err != nil {
-		fmt.Println("Error getting item", err)
-		ctx.JSON(http.StatusInternalServerError, err) // Then we will create a custom error struct
+		ctx.JSON(http.StatusInternalServerError, fmt.Errorf("error getting item: %w", err))
 		return
 	}
 
