@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c782b150-17e9-4561-bece-4a971840effa" name="Changes" comment="Cambios Interface 04/04">
-      <change afterPath="$PROJECT_DIR$/go-api/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/.idea/go-api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/app/app_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/app/url_mappings.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/app/url_mappings_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/controllers/item_controller_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/services/clients/http_client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/services/clients/http_client_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/services/clients/ml_client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-api/services/clients/mock_client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-api/app/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/app/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-api/controllers/item_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/controllers/item_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-api/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-api/items/items.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/items/items.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go-api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-api/services/item_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/services/item_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-api/services/item_service_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/services/item_service_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
