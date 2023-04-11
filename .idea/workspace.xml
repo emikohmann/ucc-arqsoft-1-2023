@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c782b150-17e9-4561-bece-4a971840effa" name="Changes" comment="Cambios Interface 04/04">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-api/items/items.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/items/items.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go-api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-api/services/item_service_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-api/services/item_service_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
