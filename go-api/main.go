@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-	app.StartApp()
 
 	fmt.Println("Hello, world")
 
@@ -32,6 +31,7 @@ func main() {
 	fmt.Print(items.Buy(-4, item))
 
 	// grupo-15
+	app.StartApp()
 }
 
 // Hola

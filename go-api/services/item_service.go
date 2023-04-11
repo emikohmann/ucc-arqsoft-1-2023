@@ -1,6 +1,7 @@
 package services
 
 import (
+<<<<<<< HEAD
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -63,10 +64,24 @@ func (client MlClient) GetItem(id int64) (ItemMercadoLibre, error) {
 
 func GetItem(id int64) (domain.Item, error) {
 	itemML, err := ItemClient.GetItem(id)
+=======
+	"go-api/domain"
+	"go-api/services/clients"
+)
+
+var (
+	MLClient clients.MLClient
+)
+
+// GetItem returns the item information
+func GetItem(id int64) (domain.Item, error) {
+	itemML, err := MLClient.GetItem(id)
+>>>>>>> master
 	if err != nil {
 		return domain.Item{}, err
 	}
 
+<<<<<<< HEAD
 	// Map MercadoLibre item to Item
 	return buildItem(id, itemML), nil
 }
@@ -76,5 +91,16 @@ func buildItem(id int64, itemML ItemMercadoLibre) domain.Item {
 		ID:    id,
 		Name:  itemML.Title,
 		Price: itemML.Price,
+=======
+	return buildItem(id, itemML), nil
+}
+
+// buildItem converts an MLItem into an Item
+func buildItem(id int64, mlItem clients.MLItem) domain.Item {
+	return domain.Item{
+		ID:    id,
+		Name:  mlItem.Title,
+		Price: mlItem.Price,
+>>>>>>> master
 	}
 }
