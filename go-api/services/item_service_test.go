@@ -32,3 +32,11 @@ func TestBuildItem(t *testing.T) {
 	// 	t.Error("item name doesn't match")
 	// }
 }
+
+func TestGetItem(t *testing.T) {
+
+	item, err := GetItem(12345)
+	assert.Nil(t, err)
+	assert.Equal(t, "Mocked item", item.Name)
+
+}
