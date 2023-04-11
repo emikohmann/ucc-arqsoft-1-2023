@@ -18,6 +18,7 @@ func GetItem(ctx *gin.Context) {
 		return
 	}
 
+	services.ItemClient = services.MlClient{}
 	item, error := services.GetItem(id)
 	if error != nil {
 		fmt.Println("Error getting item", error)
