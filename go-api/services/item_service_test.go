@@ -1,9 +1,10 @@
 package services
 
 import (
-	"github.com/stretchr/testify/assert"
 	"go-api/services/clients"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func init() {
