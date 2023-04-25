@@ -1,5 +1,7 @@
 package items
 
+import "errors"
+
 type Item struct {
 	Title       string
 	Description string
@@ -20,4 +22,12 @@ func GetItem() *Item {
 		Price:       30000,
 		HasTaxes:    false,
 	}
+}
+
+func Division(a int, b int) (int, error) {
+	if b == 0 {
+		err := errors.New("b no puede ser cero")
+		return -1, err
+	}
+	return a / b, nil
 }
