@@ -80,9 +80,7 @@ func buildItem(id int64, itemML ItemMercadoLibre) domain.Item {
 }
 
 /*
-
 func Mostrar(algo interface{}){
 	fmt.Println(algo)
 }
-
 */
