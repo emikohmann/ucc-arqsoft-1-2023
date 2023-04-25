@@ -17,7 +17,7 @@ function Item() {
         }
       );
     }, []);
-     
+
   return (
     <div>
         {typeof itemData === 'undefined' ? (
@@ -28,10 +28,10 @@ function Item() {
         <div className="row">
             <h2 className="col s12 center grey-text text-darken-3">{itemData['name']}</h2>
             <div className="col s12 m5 l5 xl4">
-                <img src="https://itechstore.com.ar/wp-content/uploads/2023/02/1669130717_1726570.webp" />
+                <img src={itemData['img_url']}  alt={"Imagen "}/>
             </div>
             <div>
-                <h4>U$D 560</h4>
+                <h4>$ {itemData['price']}</h4>
             </div>
             <div className="col s12 m6 l7 xl8">
                 <p>
@@ -44,7 +44,7 @@ function Item() {
                 </p>
             </div>
             <div>
-                <a class="waves-effect waves-light btn-large">Comprar</a>
+                <a className="waves-effect waves-light btn-large">Comprar</a>
             </div>
         </div>
         )}

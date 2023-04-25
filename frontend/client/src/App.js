@@ -12,9 +12,10 @@ function App() {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       
       <body>
-        <div class="wrapper text-lighten-2">
+        <div class="wrapper text-lighten-2 text-aling-center">
           <h3>Shop</h3>
         </div>
+
         <Router>
           <Routes>
               <Route path='/items/:id' element={<Item />} />

@@ -21,9 +21,14 @@ func GetItem(id int64) (domain.Item, error) {
 
 // buildItem converts an MLItem into an Item
 func buildItem(id int64, mlItem clients.MLItem) domain.Item {
+	var url string
+	if len(mlItem.Pictures) > 0 {
+		url = mlItem.Pictures[0].URL
+	}
 	return domain.Item{
-		ID:    id,
-		Name:  mlItem.Title,
-		Price: mlItem.Price,
+		ID:     id,
+		Name:   mlItem.Title,
+		Price:  mlItem.Price,
+		ImgURL: url,
 	}
 }
