@@ -2,6 +2,7 @@ package app
 
 import (
 	"fmt"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,6 +18,5 @@ func StartApp() {
 	err := router.Run(port)
 	if err != nil {
 		panic(fmt.Errorf("error running app: %w", err))
-		return
 	}
 }

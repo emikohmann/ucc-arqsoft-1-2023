@@ -1,9 +1,10 @@
 package services
 
 import (
-	"github.com/stretchr/testify/assert"
 	"go-api/services/clients"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func init() {
@@ -30,10 +31,7 @@ func TestBuildItem(t *testing.T) {
 }
 
 func TestGetItem(t *testing.T) {
-	//prepare
 	item, err := GetItem(12345)
-
-	//assert
 	assert.Nil(t, err)
 	assert.Equal(t, "Mocked item title", item.Name)
 	assert.Equal(t, 50.00, item.Price)

@@ -2,11 +2,12 @@ package controllers
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"go-api/services"
 	"go-api/services/clients"
 	"net/http"
 	"strconv"
+
+	"github.com/gin-gonic/gin"
 )
 
 const (

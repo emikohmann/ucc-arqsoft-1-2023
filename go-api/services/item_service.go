@@ -16,7 +16,6 @@ func GetItem(id int64) (domain.Item, error) {
 		return domain.Item{}, err
 	}
 
-	// Map MercadoLibre item to Item
 	return buildItem(id, itemML), nil
 }
 
