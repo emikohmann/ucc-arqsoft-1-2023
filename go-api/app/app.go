@@ -1,12 +1,13 @@
 package app
 
 import (
-	"github.com/gin-gonic/gin"
 	"fmt"
 	"go-api/controllers"
+
+	"github.com/gin-gonic/gin"
 )
 
-func StartApp(){
+func StartApp() {
 
 	router := gin.Default()
 	router.GET("/items/:itemID", controllers.GetItem)
@@ -16,15 +17,12 @@ func StartApp(){
 		return
 	}
 }
-	"fmt"
-	"github.com/gin-gonic/gin"
-	"go-api/controllers"
-)
 
 const (
 	port = ":8080"
 )
 
+/*
 func StartApp() {
 	router := gin.Default()
 
@@ -38,3 +36,4 @@ func StartApp() {
 		return
 	}
 }
+*/
