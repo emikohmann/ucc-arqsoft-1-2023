@@ -26,9 +26,12 @@ function Item() {
             </>
         ) : (
         <div className="row">
-            <h2 className="col s12 center grey-text text-darken-3">{itemData['name']}</h2>
+            <h2 className="col s12 center grey-text text-darken-3">{itemData.name}</h2>
             <div className="col s12 m5 l5 xl4">
-                <img src="https://itechstore.com.ar/wp-content/uploads/2023/02/1669130717_1726570.webp" />
+              {itemData.pictures != undefined && itemData.pictures.map((picture) => (
+                <img src={picture.url} />
+
+              ))}
             </div>
             <div>
                 <h4>U$D 560</h4>

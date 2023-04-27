@@ -1,8 +1,10 @@
 package clients
 
 type MLItem struct {
-	Title string  `json:"title"`
-	Price float64 `json:"price"`
+	Title     string      `json:"title"`
+	Price     float64     `json:"price"`
+	Thumbnail string      `json:"thumbnail"`
+	Pictures  interface{} `json:"pictures"`
 }
 
 // MLClient is the interface definition for a ML Client
