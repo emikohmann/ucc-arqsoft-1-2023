@@ -1,8 +1,9 @@
 package app
 
 import (
-	"github.com/gin-gonic/gin"
 	"go-api/controllers"
+
+	"github.com/gin-gonic/gin"
 )
 
 const (

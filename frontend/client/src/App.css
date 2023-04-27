@@ -1,0 +1,18 @@
+body {
+  top: 0;
+}
+
+h3 {
+  padding-left: 10pt;
+  color: white;
+}
+
+img {
+  width: 90%;
+  padding: 10%
+}
+
+.wrapper {
+  background-color: gray;
+  height: 40pt;
+}
