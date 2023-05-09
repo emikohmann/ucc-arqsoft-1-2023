@@ -1,10 +1,7 @@
 package services
 
 import (
-<<<<<<< HEAD
-=======
 	"encoding/json"
->>>>>>> c0642656318807112e40c33dd6dd105d40bcd27c
 	"errors"
 	"fmt"
 	"go-api/domain"
@@ -12,30 +9,6 @@ import (
 	"net/http"
 )
 
-<<<<<<< HEAD
-func GetItem(id int64) (domain.Item, error) {
-
-	endpoint := fmt.Sprintf("/items/MLA%d", id)
-
-	url := fmt.Sprintf("http://api.mercadolibre.com%s", endpoint)
-
-	response, err := http.Get(url)
-	if err != nil {
-		return domain.Item{}, err
-	}
-	if response.StatusCode != http.StatusOK {
-		return domain.Item{}, errors.New(
-			fmt.Sprintf("unexpected status code %d", response.StatusCode))
-	}
-
-	bytes, err := ioutil.ReadAll(response.Body)
-
-	return domain.Item{
-		ID:    id,
-		Name:  "TV 32 pulgadas",
-		Price: 100000,
-	}, nil
-=======
 type Client interface {
 	GetItem(id int64) (ItemMercadoLibre, error)
 }
@@ -104,5 +77,4 @@ func buildItem(id int64, itemML ItemMercadoLibre) domain.Item {
 		Name:  itemML.Title,
 		Price: itemML.Price,
 	}
->>>>>>> c0642656318807112e40c33dd6dd105d40bcd27c
 }

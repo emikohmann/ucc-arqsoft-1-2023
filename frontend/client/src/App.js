@@ -2,6 +2,8 @@
 import './App.css';
 import Item from'./pages/items';
 
+import {BrowserRouter as Router, Routers, Route} from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
@@ -25,6 +27,12 @@ function App() {
   
       </form>
     </body>
+
+    <Router>
+      <Routers>
+        <Route path = '/items/:id' element={<Item />}></Route>
+      </Routers>
+    </Router>
 
     </div>
 
