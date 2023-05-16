@@ -1,5 +1,12 @@
 # Guia Práctica GRUPO 17
 
+### Bajar cambios del proyecto:
+
+```bash
+git pull origin grupo-17
+```
+
+
 ## Comandos de GO
 
 ### Corroborar la instalación y versión de GO
@@ -43,3 +50,4 @@ go mod tidy
 ```bash
 go fmt ./...
 ```
+
